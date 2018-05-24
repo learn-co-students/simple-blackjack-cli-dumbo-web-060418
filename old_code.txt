@@ -1,0 +1,30 @@
+
+def hit?(number)
+  prompt_user
+  user_input = get_user_input
+  if user_input == "h"
+    total = deal_card + number
+    return display_card_total(total)
+  elsif user_input == "s"
+    return display_card_total(number)
+  else
+    return invalid_command
+  end
+end
+
+def hit?(number)
+  prompt_user
+  user_input = get_user_input
+  until user_input == "h" || "s"
+  invalid_command
+  prompt_user
+  user_input = get_user_input
+  ##return user_input
+  end
+  if user_input == "h"
+    total = deal_card + number
+    return display_card_total(total)
+  else
+    return display_card_total(number)
+  end
+end
